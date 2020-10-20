@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilangan Maximum</title>
+</head>
+<body>
+    <div id="hasil"></div>
+
+
+    <!-- script -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+
+    <script type='text/babel'>
+        // menggunakan functions
+
+        function Max(props) {
+            let arrayBil = Object.values(props);
+            let max2 = -99;
+            arrayBill.forEach(element => {
+                if(element > max2) {
+                    max2= element
+                }
+            });
+
+            let a = parseInt(props.bil1);
+            let b = parseInt(props.bil2);
+            let c = parseInt(props.bil3);
+            let max = -99;
+            if(a>max) {
+                max = a;
+            }
+            
+            if (b > max {
+                max = b;
+            }
+            
+            if (c > max) {
+                max = c;
+            }
+
+            
+            return (
+                <p>
+                Nilai max dari bilangan : {a}, {b}, {c} adalah {max}</p>
+            )
+        }
+        function ElemenHTML () {
+            return (
+                <div>
+                    <h1>Biodata Mahasiswa</h1>
+                    <Max bil1='10' bil2='3' bil3='4'/> 
+                </div>
+            );
+        }
+        // jangan lupakan syntax dibawah agar dapat ditampilkan dihalaman browser
+        ReactDOM.render(<ElemenHTML/>,hasil);
+    </script>
+
+</body>
+</html>

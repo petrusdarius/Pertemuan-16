@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilangan Maximum</title>
+</head>
+<body>
+    <div id="hasil"></div>
+
+
+    <!-- script -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+
+    <script type='text/babel'>
+        // menggunakan functions
+
+        function Max(props) {
+            return (
+                <h1>Nilai Mahasiswa</h1>
+                <p>Bil1 : {props.bil1} <br/>
+                Bil2 : {props.bil2} <br/>
+                Bil3: {props.bil3}<br/>
+                Nilai Max: {Math.max(props.bil1, props.bil2,props.bil3)}
+                </p>
+            )
+        }
+        function ElemenHTML () {
+            return (
+                    <Max bil1='10' bil2='3' bil3='4'/> 
+            );
+        }
+        // jangan lupakan syntax dibawah agar dapat ditampilkan dihalaman browser
+        ReactDOM.render(<ElemenHTML/>,hasil);
+    </script>
+
+</body>
+</html>

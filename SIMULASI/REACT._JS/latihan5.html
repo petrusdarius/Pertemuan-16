@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Component</title>
+</head>
+<body>
+    <div id="hasil"></div>
+
+
+    <!-- script -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+
+    <script type='text/babel'>
+        // menggunakan functions
+        function Mhs(props) {
+            return (
+                <p>NIM : {props.nim} <br/>
+                Nama : {props.nama} <br/>
+                Gender: {props.gender == "L" ? "Laki-laki" : "Perempuan"}<br/>
+                Umur : {props.umur} <br/>
+                Jurusan : {props.jur} <br/>
+                Angkatan : {props.angkatan} <br/>
+                <hr/></p>
+            )
+        }
+        function ElemenHTML () {
+            return (
+                <div>
+                    <h1>Biodata Mahasiswa</h1>
+                    <Mhs nim='002' nama='Darius' gender='L'
+                    umur='23 tahun' jur='Fisika' angkatan='2015'/> 
+
+                    <hr/>
+                    <Mhs nim='003' nama='Wati' gender='P'
+                    umur='22 tahun' jur='Teknik' angkatan='2016'/>
+                </div>
+            );
+        }
+        // jangan lupakan syntax dibawah agar dapat ditampilkan dihalaman browser
+        ReactDOM.render(<ElemenHTML/>,hasil);
+    </script>
+
+</body>
+</html>
